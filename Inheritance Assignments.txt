@@ -1,0 +1,165 @@
+inheritance Assignments
+
+
+Q2.
+
+package pack1;
+
+class base 
+{
+	base()
+	{
+		System.out.println("base constructor");
+	}
+}
+
+class sub1 extends base
+{
+	sub1()
+	{
+		System.out.println("sub1 constructor");
+	}
+}
+
+class sub2 extends sub1
+{
+	sub2()
+	{
+		System.out.println("sub2 constructor");
+	}
+}
+
+
+public class demo11 
+{
+	public static void main(String[] args) 
+	{
+		sub2 s=new sub2();
+	}
+
+}
+
+
+         *******************************
+Q2.
+
+package pack1;
+
+class vehical 
+{
+	public void start()
+	{
+		System.out.println("vehical start");
+	}
+}
+
+class fourwheeler extends vehical
+{
+	public void start()
+	{
+		System.out.println("child start");
+	}
+}
+
+
+
+public class demo11 
+{
+	public static void main(String[] args) 
+	{
+		vehical s=new fourwheeler();
+		s.start();
+	}
+
+}
+
+
+***********************************
+
+Q3
+
+package pack1;
+
+class base
+{
+	base()
+	{
+		System.out.println("base constructor");
+	}
+}
+
+class sub1 extends base
+{
+	sub1()
+	{
+		System.out.println("sub1 constructor");
+	}
+}
+
+class sub2 extends base
+{
+	sub2()
+	{
+		System.out.println("sub2 constructor");
+	}
+}
+
+
+public class demo11 
+{
+	public static void main(String[] args) 
+	{
+		sub1 s=new sub1();
+		sub2 s1=new sub2();
+		
+	}
+
+}
+***************************************
+
+Q4
+
+package pack1;
+
+class top1
+{
+	public void disp1()
+	{
+		System.out.println("in a top1");
+	}
+}
+
+class bottom1 extends top1
+{
+	public void disp1()
+	{
+		System.out.println("in a bottom1");
+	}
+}
+
+class bottom2 extends top1
+{
+	public void disp1()
+	{
+		System.out.println("in a bottom2");
+	}
+}
+
+class bottom3 extends top1
+{
+	public void disp1()
+	{
+		System.out.println("in a bottom3");
+	}
+}
+
+public class demo11 
+{
+	public static void main(String[] args) 
+	{
+		top1 s=new bottom3();
+		s.disp1();
+		
+	}
+
+}
