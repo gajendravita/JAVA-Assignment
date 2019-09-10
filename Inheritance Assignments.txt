@@ -215,3 +215,48 @@ public class demo
 	}
 }
 **************************************************************************
+Q>6)
+Ans:
+
+interface A
+{
+	void disp1();
+}
+interface B extends A
+{
+	void disp2();
+}
+
+class c implements B
+{
+	void disp()
+	{
+		System.out.println("In a class");
+	}
+
+
+	public void disp1() {System.out.println("interface 1");}
+		// TODO Auto-generated method stub
+		
+	
+
+	
+	public void disp2() {System.out.println("interface 2");}
+		// TODO Auto-generated method stub
+		
+	
+}
+public class demo6 
+{
+
+	public static void main(String[] args) 
+	{
+		c s=new c();
+		s.disp();
+		s.disp1();
+		s.disp2();
+
+	}
+
+}
+
