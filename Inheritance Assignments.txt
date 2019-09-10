@@ -165,32 +165,28 @@ public class demo11
 }
 
 ****************************************
-Q.5)
-Ans:
-package Inheritance;
+package assigninheri;
 
-import java.awt.Shape;
-
-abstract class shape
+abstract class shape1
 {
 	abstract void draw();
 }
 
-class polygon extends shape
+class polygon extends shape1
 {
 	void draw()
 	{
 		System.out.println("Drawing in Polygon");
 	}
 }
-class circle extends shape
+class circle extends shape1
 {
 	void draw()
 	{
 		System.out.println("Drawing in Circle");
 	}	
 }
-class traingle extends shape
+class traingle extends shape1
 {
 	void draw()
 	{
@@ -198,27 +194,24 @@ class traingle extends shape
 	}
 }
 
-class Demo1
+public class demo
 {
 	public static void main(String args[])
 	{	
-		/*polygon p=new polygon();
-		circle c=new circle();
-		traingle t=new traingle();*/
-		Object arr[]=new Object[3];
+		
+		shape1 arr[]=new shape1[3];
 		arr[0]= new polygon();
 		arr[1]=new circle();
 		arr[2]=new traingle();
 		
 		
-		
 		for(int i=0;i<arr.length;i++)
 		{
-			((shape)arr[i]).draw();
+			arr[i].draw();
 			
 		}
 		
 		
 	}
 }
-**********************************************
+**************************************************************************
