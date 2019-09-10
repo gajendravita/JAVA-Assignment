@@ -215,7 +215,7 @@ public class demo
 	}
 }
 **************************************************************************
-Q>6)
+Q.6)
 Ans:
 
 interface A
@@ -252,6 +252,51 @@ public class demo6
 	public static void main(String[] args) 
 	{
 		c s=new c();
+		s.disp();
+		s.disp1();
+		s.disp2();
+
+	}
+
+}
+
+******************************************************************************
+Q.7)
+
+interface parent2
+{
+	void disp2();
+}
+
+class parent1
+{
+	void disp1()
+	{
+	    System.out.println("In a parent1 class");
+	}
+}
+
+
+class child extends parent1 implements parent2
+{
+	void disp()
+	{
+		System.out.println("In a class");
+	}
+	
+	public void disp2()
+	{
+	    System.out.println("interface 2");
+	    
+	}
+	
+}
+public class demo6 
+{
+
+	public static void main(String[] args) 
+	{
+		child s=new child();
 		s.disp();
 		s.disp1();
 		s.disp2();
