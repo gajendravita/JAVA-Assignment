@@ -364,4 +364,44 @@ public class demo
     }
 }
 **********************************************************
+q.8)
+class base1
+{
+  base1()
+    {
+    System.out.println("In BAse");
+    }
+}
+class sub1 extends base1
+{
+     sub1()
+    {
+        //super(33);
+         System.out.println("Default");
+    }
+     sub1(int a)
+    {
+        //super(3);
+        System.out.println(a);
+    }
+    sub1(int a,int b)
+    {
+        //super(39);
+         System.out.println(a+"\t"+b);
+    }
+    
+}
+
+public class demo
+{
+    public static void main(String args[])
+    {
+        sub1 s=new sub1();
+        
+        //Write code here for method calls
+        
+        
+    }
+}
+************************************************************
 
