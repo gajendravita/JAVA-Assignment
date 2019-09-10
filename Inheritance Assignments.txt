@@ -305,3 +305,63 @@ public class demo6
 
 }
 
+**************************************************************
+Q.9)
+interface game
+{
+    void play();
+}
+
+class cricket implements game
+{
+public void ONEDAY()
+{
+    System.out.println("One day match");
+}
+    
+    
+public void play()
+{
+    System.out.println("Playing Cricket");
+}
+}
+
+class football implements game
+{
+public void play()
+{
+    System.out.println("Playing Football");
+}
+}
+
+class tennis implements game
+{
+public void play()
+{
+    System.out.println("Playing Tennis");
+}
+}
+
+public class demo
+{
+    static void perform(game ref)
+    {
+       ref.play();
+        if(ref instanceof cricket)
+        {
+            cricket ref1=(cricket)ref;
+             ref1.ONEDAY();
+        }
+        
+    }
+
+    public static void main(String args[])
+    {
+        perform(new cricket());
+        perform(new football());
+        perform(new tennis());
+        
+    }
+}
+**********************************************************
+
