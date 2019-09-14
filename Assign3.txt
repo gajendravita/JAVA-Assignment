@@ -1,0 +1,164 @@
+Q 2.
+
+package assign3;
+
+class MyArithException extends Exception
+{
+	public MyArithException(String msg)
+	{
+		super(msg);
+	}
+}
+
+package assign3;
+
+public class calculator 
+{
+	int cald(int num) throws MyArithException
+	{
+		if(num<=0) 
+		{
+			throw new MyArithException("Negative or Zero Not Allowed");
+		}
+		return 2*num;
+	}
+}
+
+package assign3;
+
+import java.util.Scanner;
+
+
+public class calapp {
+
+	public static void main(String[] args)
+	{
+		int result=0;
+		Scanner s=new Scanner(System.in);
+		int num=s.nextInt();
+		calculator c=new calculator();
+		try
+		{
+			result=c.cald(num);
+			System.out.println(result);
+		}
+		catch(MyArithException msg)
+		{
+			System.out.println(msg);
+		}
+
+	}
+
+}
+
+*****************************************
+
+Q 3.
+package course;
+
+public class Dac 
+{
+	public void term1()
+	{
+		System.out.println("in term1");
+	}
+	public void term2()
+	{
+		System.out.println("in term");
+	}
+}
+
+package course;
+
+public class Predac 
+{
+	public void cet()
+	{
+		System.out.println("in Predac");
+	}
+}
+
+package course;
+
+public class Basic 
+{
+
+	public void finaltest()
+	{
+		System.out.println("in Basic");
+	}
+
+
+}
+
+package course;
+
+public class Basic 
+{
+
+	public void finaltest()
+	{
+		System.out.println("in Basic");
+	}
+
+
+}
+
+package application;
+import course.*;
+public class VitaApp {
+
+	public static void main(String[] args) 
+	{
+		Dac d=new Dac();
+		d.term1();
+		d.term1();
+		
+		Predac p=new Predac();
+		p.cet();
+		
+		Basic b=new Basic();
+		b.finaltest();
+		
+	}
+
+}
+
+*************************************
+Q 4.
+class Item
+{
+
+	String itemid;
+	String name;
+	int cost;
+	public Item(String itemid, String name, int cost) 
+	{
+		super();
+		this.itemid = itemid;
+		this.name = name;
+		this.cost = cost;
+	}
+	
+	public void display()
+	{
+		System.out.println("Item Id:"+itemid);//("Item Id:"+itemid+" ");
+		System.out.println("Item Name:"+name);
+		System.out.println("Item Cost:"+cost);
+	}
+	
+}
+
+
+
+
+public class Demo4 {
+
+	public static void main(String[] args) 
+	{
+		Item i=new Item("ABC","Gift",12);
+		i.display();
+
+	}
+
+}
